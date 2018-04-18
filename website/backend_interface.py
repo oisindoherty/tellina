@@ -23,9 +23,9 @@ else:
     os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 # initialize FLAGS by parsing a dummy argument list
-if tf.__version__.startswith('1.4'):
-    tf.app.flags.FLAGS(sys.argv[:1])
-    FLAGS = tf.app.flags.FLAGS
+# if tf.__version__.startswith('1.4'):
+tf.app.flags.FLAGS(sys.argv[:1])
+FLAGS = tf.app.flags.FLAGS
 
 FLAGS.demo = True
 FLAGS.fill_argument_slots = False
